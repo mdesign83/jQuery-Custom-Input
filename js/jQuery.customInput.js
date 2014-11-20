@@ -15,7 +15,7 @@
 				var input = $(this);
 
 				// get the associated label using the input's id
-				var label = $('label[for="'+input.attr('id')+'"]');
+				var label = $(this).parent().find('label[for="'+input.attr('id')+'"]');
 
 				// wrap the input + label in a div
 				input.add(label).wrapAll('<div class="custom-'+ input.attr('type') +'"></div>');
